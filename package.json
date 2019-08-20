@@ -2,11 +2,13 @@
   "name": "angularx-qrcode-cil",
   "version": "1.0.0",
   "author": "https://github.com/amusitelang",
+  "bundleDependencies": false,
+  "deprecated": false,
   "description": "Ionic 3/4 and Angular4/5/6/7/8+ QRCode module generator using qrcodejs",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
-  "license": "MIT",
+  "license": "ISC",
   "keywords": [
     "angularx-qrcode",
     "angular-qrcode",
@@ -35,11 +37,10 @@
     "build:umd": "webpack --config webpack-umd.config.ts",
     "build:umd:watch": "npm run build:umd -- --watch",
     "build:watch": "concurrently --raw \"npm run build:umd:watch\" \"npm run build:esm:watch\"",
-    "ci": "npm run lint && npm run build && npm run docs",
-    "ci_fix": "npm run lint && npm run build && npm run docs",
+    "ci": "npm run lint && npm run build",
+    "ci_fix": "npm run lint && npm run build",
     "clean:all": "npm run clean:tmp && rimraf node_modules",
     "clean:tmp": "rimraf coverage dist tmp docs",
-    "docs": "compodoc -p tsconfig.json -d docs --disableCoverage --disablePrivate --disableInternal",
     "explorer": "source-map-explorer ./dist/index.umd.js",
     "lint": "tslint 'src/**/*.ts' --fix",
     "ngcompile": "node_modules/.bin/ngc -p tsconfig-aot.json",
@@ -49,7 +50,8 @@
     "prebuild:watch": "rimraf dist tmp",
     "prepublishOnly": "npm run ci",
     "preversion": "npm run ci",
-    "reinstall": "rm -rf node_modules && npm install"
+    "reinstall": "rm -rf node_modules && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "qrcodecil": "1.0.2"
