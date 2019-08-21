@@ -1,6 +1,6 @@
 {
   "name": "angularx-qrcode-cil",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "https://github.com/amusitelang",
   "bundleDependencies": false,
   "deprecated": false,
@@ -29,7 +29,7 @@
     "ng",
     "typescript"
   ],
-  "homepage": "https://github.com/cordobo/angularx-qrcode#readme",
+  "homepage": "https://github.com/amusitelang/angularx-qrcode#readme",
   "scripts": {
     "build": "npm run build:esm && npm run build:umd",
     "build:esm": "npm run ngcompile",
